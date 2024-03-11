@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+
+
+
+{% block parrafo %}
+
+<form action="/AppTP3/buscar_personaje/" method="GET">
+
+    <p>
+        <input type="text" name="nombre">
+
+        <input type="submit" value="Buscar">
+
+    </p>
+
+</form>
+
+<p>{{mensaje}}</p>
+
+
+{% for personaje in resultados %}
+
+    <p>{{personaje}}</p>
+
+{% endfor %}
+
+
+{% endblock %}
